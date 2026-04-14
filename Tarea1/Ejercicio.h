@@ -4,7 +4,7 @@ using namespace std;
 
 //Clase base Ejercicio
 class Ejercicio{
-    public:
+    private:
         int codigo;
         string nombre;
         string tipo;
@@ -13,12 +13,12 @@ class Ejercicio{
         string descripcion;
         int ultimaSemana; 
         
-        
+    public: 
         //Constructor 
         Ejercicio(int codigo, string nombre, string tipo, string intensidad, int tiempo, string descripcion, int ultimaSemana);
 
         //Destructor
-        ~Ejercicio();
+        virtual ~Ejercicio();
 
         //Virtual para ejecutar las clases hijas
         virtual void mostrarInfo(); 
