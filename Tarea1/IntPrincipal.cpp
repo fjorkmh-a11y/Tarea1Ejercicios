@@ -205,7 +205,6 @@ int main() {
                 }
 
                 //Semana actual
-                int semanaActual;
                 cout << "Semana actual del calendario (no negativo): ";
                 cin >> semanaActual;
                 cin.ignore();
