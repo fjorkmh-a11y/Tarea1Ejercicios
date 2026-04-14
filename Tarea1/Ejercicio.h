@@ -29,6 +29,7 @@ class Ejercicio{
         int getCodigo();
         int getultimaSemana();
         string getNombre();
+        string getTipo();
         string getIntensidad();
 
         //Metodos set para modificar datos
