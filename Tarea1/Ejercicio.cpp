@@ -43,17 +43,3 @@ void Ejercicio::setDescripcion(string descripcion) {this->descripcion = descripc
 void Ejercicio::setultimaSemana(int ultimaSemana) {this->ultimaSemana = ultimaSemana; }
 
 
-
-
-
-
-
-
-
-
-int Ejercicio::getTiempo(){
-    return tiempo;
-}
-string Ejercicio::getIntensidad(){
-    return intensidad;
-}
