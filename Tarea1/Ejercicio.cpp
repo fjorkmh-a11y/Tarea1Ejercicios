@@ -33,10 +33,12 @@ int Ejercicio::getTiempo(){
 int Ejercicio::getCodigo() { return codigo; }
 int Ejercicio::getultimaSemana() { return ultimaSemana; }
 string Ejercicio::getNombre() { return nombre; }
+string Ejercicio::getTipo() { return tipo; }
 string Ejercicio::getIntensidad() { return intensidad; }
 
 //Implementacion metodos set
 void Ejercicio::setNombre(string nombre) {this->nombre = nombre; }
+void Ejercicio::setTipo(string tipo) {this->tipo = tipo; }
 void Ejercicio::setIntensidad(string intensidad) {this->intensidad = intensidad; }
 void Ejercicio::setTiempo(int tiempo) {this->tiempo = tiempo; }
 void Ejercicio::setDescripcion(string descripcion) {this->descripcion = descripcion; }
