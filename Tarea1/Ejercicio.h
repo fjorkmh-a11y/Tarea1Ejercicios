@@ -34,6 +34,7 @@ class Ejercicio{
 
         //Metodos set para modificar datos
         void setNombre(string nombre);
+        void setTipo(string tipo);
         void setIntensidad(string intensidad);
         void setTiempo(int tiempo);
         void setDescripcion(string descripcion);
