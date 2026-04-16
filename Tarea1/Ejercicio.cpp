@@ -11,8 +11,7 @@ Ejercicio::Ejercicio(int codigo, string nombre, string tipo, string intensidad, 
     this->ultimaSemana = ultimaSemana;
 }
 
-//Destructor
-Ejercicio::~Ejercicio(){}
+
 
 //Metodos
 
