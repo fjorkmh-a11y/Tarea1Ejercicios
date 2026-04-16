@@ -4,7 +4,7 @@
 #include "Ejercicio.h"
 
 //Clase Fuerza
-class EjercicioFuerza : public Ejercicio {
+class EjercicioFuerza:public Ejercicio {
     private:
         int repeticiones;
         int series;
