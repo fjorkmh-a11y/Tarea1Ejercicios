@@ -8,9 +8,9 @@
 using namespace std;
 
 int main() {
-    vector<Ejercicio*> listaEjercicios;  // Lista para guardar todos los ejercicios creados
-    int opcion;  // Variable para guardar la opcion del menu
-    int codigoSiguiente = 100;  // Numero para crear IDs automaticos para los ejercicios
+    vector<Ejercicio*> listaEjercicios;  //Lista dinamica para guardar todos los ejercicios creados
+    int opcion;  //Variable para guardar la opcion del menu
+    int codigoSiguiente = 100;  //Numero para crear ids automaticos para los ejercicios con codigoSiguiente++
 
     //Bucle do para ejecutara al menos una vez y que el usuario decida salir
     do { 
@@ -37,7 +37,7 @@ int main() {
                 
                 //Nombre
                 cout << "Nombre del ejercicio: ";
-                getline(cin, nombre); //Leer linea completa de texto
+                getline(cin, nombre); //Leer linea completa de texto con espacios y guardar en nombre
                 
                 //Tipo
                 cout << "Tipo: ";
@@ -60,7 +60,7 @@ int main() {
 
                 cout << "Semana del ultimo uso (0 si es nuevo): ";
                 cin >> ultimaSemana;
-                cin.ignore();
+                cin.ignore(); //quita el salto de espacio para que getline despues no lea una linea vacia
 
                 //Crear el ejercicio y agregarlo a la lista vector
                 EjercicioCardio* nuevo = new EjercicioCardio
@@ -111,7 +111,7 @@ int main() {
                 cin.ignore();
                 
 
-                cout << "Semana del ultimo uso (debe ser positivo): ";
+                cout << "Semana del ultimo uso: ";
                 cin >> ultimaSemana;
                 cin.ignore();
 
@@ -120,7 +120,7 @@ int main() {
                 (codigoSiguiente++, nombre, tipo, intensidad, tiempo, descripcion, ultimaSemana, repeticiones, series, peso);
                 listaEjercicios.push_back(nuevo);
 
-                cout << "¡Ejercicio de Fuerza creado exitosamente!" << endl;
+                cout << "Ejercicio de Fuerza creado exitosamente" << endl;
                 break;
             }
 
@@ -130,7 +130,7 @@ int main() {
                 if (listaEjercicios.empty()) {
                     cout << "No hay ejercicios creados aun." << endl;
                 } else {
-                    cout << "\n--- LISTADO DE EJERCICIOS ---" << endl;
+                    cout << "\nLISTADO DE EJERCICIOS" << endl;
                     for (Ejercicio* ejercicio:listaEjercicios) {
                         ejercicio->mostrarInfo();  //polimorfismo para mostrar info
                         cout << endl;
@@ -168,11 +168,11 @@ int main() {
                         cout << "Nueva descripcion: ";
                         getline(cin, nuevaDescripcion);
 
-                        //Actualizar usando los set
+                        //Actualizar usando los metodos set
                         ejercicio->setNombre(nuevoNombre);
                         ejercicio->setDescripcion(nuevaDescripcion);
 
-                        cout << "¡Datos actualizados correctamente!" << endl;
+                        cout << "Datos actualizados correctamente" << endl;
                         encontrado = true;
                         break;
                     }
@@ -216,7 +216,6 @@ int main() {
                 }
 
                 //Cantidad de ejercicios en la rutina
-                int numeroEjercicios;
                 cout << "Cuantos ejercicios desea en la rutina: ";
                 cin >> numeroEjercicios;
                 cin.ignore();
