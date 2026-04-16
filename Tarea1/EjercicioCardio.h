@@ -4,7 +4,7 @@
 #include "Ejercicio.h"
 
 //Clase hija cardio heredando de clase Ejercicio
-class EjercicioCardio : public Ejercicio{
+class EjercicioCardio:public Ejercicio{
 
     private:
         string implemento; //Atributo especifico privado. 
