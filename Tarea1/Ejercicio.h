@@ -18,7 +18,7 @@ class Ejercicio{
         Ejercicio(int codigo, string nombre, string tipo, string intensidad, int tiempo, string descripcion, int ultimaSemana);
 
         //Destructor
-        virtual ~Ejercicio();
+        virtual ~Ejercicio(){}
 
         //Virtual para ejecutar las clases hijas
         virtual void mostrarInfo(); 
