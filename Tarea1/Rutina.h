@@ -5,24 +5,26 @@
 #include <string>
 #include "Ejercicio.h"
 
+using namespace std;
+
 class Rutina{
     private:
         string nombreCliente;
         int numeroSemana;
-        //lista de puntero. Apuntando a objetos concretos(cardio, fuerza )
-        vector<Ejercicio*> ejercicios; /*vector<>: contenedor magico
-        Ejercicio* puntero a un objeto de Ejercicio
+
+        //lista de puntero. Apuntando a objetos concretos(cardio, fuerza)
+        vector<Ejercicio*> ejercicios; 
+        /* Ejercicio*: puntero a un objeto de Ejercicio
         ejercicios: lista dinamica de punteros*/
 
     public:
-        //Constructor cliente + semana
+        //Constructor con cliente + semana
         Rutina(string nombreCliente, int numeroSemana);
         ~Rutina();
 
         //Regla Negocio: Metodo que valide la restriccion de no repetir 2 semanas
-        /*-Boleano para que acepte o rechaze. 
-        -Como Parametros recibe Ejercicio* ejercicio para que acepte cualquier ejercicio
-        - y la regla de negocio, int numeroSemana
+        /* -Como Parametros recibe Ejercicio* ejercicio para que acepte cualquier ejercicio
+        y la regla de negocio numero de semana
         - Si pasa validacion, guarda el ejercicio en el vector*/
         bool agregarEjercicio(Ejercicio* ejercicio, int numeroSemana);
 
