@@ -11,7 +11,7 @@ Rutina::Rutina(string nombreCliente, int numeroSemana){
 //Destructor definicion
 Rutina::~Rutina(){}
 
-//Def Metodo agregar ejercicio
+//Def metodo agregar ejercicio
 bool Rutina::agregarEjercicio(Ejercicio* ejercicio, int numeroSemana){
     //Verificar si ejercicio fue usado semana anterior
     //Comparar ejercicio->getultimaSemana con la semana anterior
@@ -29,13 +29,30 @@ bool Rutina::agregarEjercicio(Ejercicio* ejercicio, int numeroSemana){
         ejercicio->setultimaSemana(numeroSemana);
         return true;
     }
+}
 
 //Metodo para calcular tiempo
 int Rutina::calcularTiempoTotal(){
     int total = 0;
-    // Recorremos el vector sumando tiempos
+    //Recorrer el vector sumando tiempos  
+    //Usar metodo size() del vector para devolver cantidad 
     for (int i = 0; i < ejercicios.size(); i++) {
         total += ejercicios[i]->getTiempo();
     }
     return total;
+}
+
+//Mostrar rutina
+void Rutina::mostrarRutina(){
+    cout << "\nRUTINA DE ENTRENAMIENTO" << endl;
+    cout << "Cliente: " << nombreCliente << endl;
+    cout << "Semana: " << numeroSemana << endl;
+    cout << "Total de ejercicios: " << ejercicios.size() << endl;
+    cout << "Tiempo estimado de la rutina: " << calcularTiempoTotal() << " minutos" << endl;
+
+    cout << "\nDETALLE DE EJERCICIOS" << endl;
+    for (int i = 0; i < ejercicios.size(); i++) {
+        cout << "\nEjercicio " << (i + 1) << ":" << endl;
+        ejercicios[i]->mostrarInfo();
+    }
 }
