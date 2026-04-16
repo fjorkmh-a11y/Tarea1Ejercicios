@@ -1,20 +1,20 @@
 #include "EjercicioFuerza.h"
 
 
-/*IMPLEMENTAR:
-Constructor. Destructor. Get y set. Mostrarinfo()*/
+//Implementacion de constructor. Destructor. Get y set. Mostrarinfo()
 
-//1.Constructor
+
+//Constructor
 EjercicioFuerza::EjercicioFuerza(int codigo, string nombre, string tipo, string intensidad, int tiempo, string descripcion, int ultimaSemana, 
             int repeticiones, int series, double peso)
-    : Ejercicio(codigo, nombre, tipo, intensidad, tiempo, descripcion, ultimaSemana){
+    :Ejercicio(codigo, nombre, tipo, intensidad, tiempo, descripcion, ultimaSemana){
         //Atributos propio clase Fuerza
         this->repeticiones = repeticiones;
         this->series = series;
         this->peso = peso;
     }
 
-//2. Destructor
+//Destructor
 EjercicioFuerza::~EjercicioFuerza(){}
 
 //Metodos get y set
@@ -28,10 +28,9 @@ double EjercicioFuerza::getPeso() {return peso;}
 void EjercicioFuerza::setPeso(double peso) {this->peso = peso;}
 
 
-//Polimorfismo para reutilizar base 
+//Polimorfismo para la informacion
 void EjercicioFuerza::mostrarInfo(){
     Ejercicio::mostrarInfo(); 
-
     //Detalles info propio de la clase fuerza
     cout << "Tipo: Fuerza / Pesas" << endl;
     cout << "Repeticiones: " << repeticiones << endl;
